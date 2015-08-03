@@ -1,0 +1,10 @@
+function FirstReverse(str) { 
+  // the split method splits the string into an array of substrings depending on what argument you pass into it
+  //in this case we pass ('') so each time the method comes upon a ''(which happens to exist between every character) in the string it creates a substring and adds it to an array
+  //the join method "joins" the array's substrings into a string and leaves a "" between them 
+  return str.split("").reverse().join("");        
+}
+  
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+FirstReverse(readline());  
