@@ -1,0 +1,31 @@
+function LetterCountI(str) { 
+  var count = 0;
+  var res = "";
+  var max = 0;
+  var string = str.split(" ");
+  for(var i=0; i<string.length; i++){
+    for(var j=0; j<string[i].length; j++){
+      for(var k=1; k<string[i].length; k++){
+      	if(string[i][j]==string[i][j+k]){
+        	count++;
+        }
+      }
+    }
+    if(count>max){
+      max = count;
+      count = 0;
+      res = string[i];
+    }
+  }
+  if(max==0){
+    return -1;
+  }
+  else{
+  	return res;  
+  }      
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+LetterCountI(readline());           
+
