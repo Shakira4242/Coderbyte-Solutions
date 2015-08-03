@@ -1,0 +1,22 @@
+function SecondGreatLow(arr) { 
+ var secondLowest= 0;
+ var secondLargest= 0;
+ 
+ var arr = arr.sort(function(a,b){return a - b});
+  for(var i=0;i<arr.length;i++){
+  	if(arr[i]<arr[i+1]){
+    	secondLowest = arr[i+1];
+      	break;
+    }
+  }
+  for(var j=arr.length-1;j>=0;j--){
+  	if(arr[j]>arr[j-1]){
+    	secondLargest = arr[j-1];
+      	break;
+    }
+  }
+  
+return secondLowest + " " +secondLargest;
+  
+}
+
