@@ -1,0 +1,33 @@
+function ArithGeo(arr) { 
+  var arithmetic = [];
+  var arithyes = true;
+  var geometric = [];
+  var geoyes = true;
+  for(var i=0;i<arr.length-1;i++){
+  	arithmetic.push(arr[i+1]-arr[i]);
+    geometric.push((arr[i+1])/(arr[i]));
+  }
+  for(var i=0;i<arithmetic.length-1;i++){
+  	if(arithmetic[i]!=arithmetic[i+1]){
+    	arithyes = false;
+    }
+  }
+  for(var j=0;j<geometric.length-1;j++){
+  	if(geometric[j]!=geometric[j+1]){
+    	geoyes = false;
+    }
+  }
+  if(geoyes){
+  	return "Geometric";
+  }
+  else if(arithyes){
+  	return "Arithmetic";
+  }
+  else{
+  	return -1;
+  }
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+ArithGeo(readline());    
