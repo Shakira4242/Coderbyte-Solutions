@@ -1,0 +1,17 @@
+function FirstFactorial(num) { 
+  var sum = 1;
+  if(num == 0){
+  	return 1;
+  }
+  else{
+    while(num>1){
+      sum *= num;
+      num--;
+    }
+    return sum;
+  }  
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+FirstFactorial(readline()); 
