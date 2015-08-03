@@ -1,0 +1,22 @@
+function LongestWord(sen) { 
+  var c = 0, k =0, res =0;
+  sen = sen.split(" ");
+  for(var i=0;i<sen.length;i++){
+  	for(var j=0;j<sen[i].length;j++){
+    	if(sen[i][j].search(/[A-Za-z0-9]/gi) != -1){
+        	c++;
+        }
+    }
+    if(c>k){
+      res = sen[i];
+      k = c;
+    }
+    c=0;
+    
+  }
+  return res;    
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+LongestWord(readline());  
