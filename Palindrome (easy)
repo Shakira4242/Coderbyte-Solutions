@@ -1,0 +1,17 @@
+function Palindrome(str) { 
+  var string = str.split(" ").join("");
+  var reverse = string.split("").reverse().join("");
+  for(var i=0;i<string.length;i++){
+  	if(string.charAt(i)==reverse.charAt(i)){
+    	return true;
+    }
+    else{
+    	return false;
+    }
+  }
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+Palindrome(readline());           
+
