@@ -1,0 +1,35 @@
+function LetterChanges(str) { 
+  var original = str.toString();
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var string = "";
+  var vowels = "aeiou";
+  var finalString = "";
+  for(var i =0; i<str.length; i++){
+  	var loc = alphabet.indexOf(original.charAt(i));
+    if(loc == -1){
+    	string += original.charAt(i);
+    }
+    else if(loc == 25){
+    	string += "a";
+    }
+    else{
+        string += alphabet.charAt(loc + 1);
+    }
+  }
+  for(var j = 0; j<string.length ; j++){
+    var toUpper = vowels.indexOf(string.charAt(j));
+  	if(toUpper == -1){
+    	finalString += string.charAt(j);
+    }
+    else{
+    	finalString += string.charAt(j).toUpperCase();
+    }
+  }
+  // code goes here  
+  return finalString; 
+         
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+LetterChanges(readline());           
