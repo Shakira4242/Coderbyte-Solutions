@@ -1,0 +1,20 @@
+function SimpleSymbols(str) { 
+  str = str.toLowerCase();
+  for(var i =0;i<str.length;i++){
+    if(str.charAt(i).search(/[a-z]/gi)!= -1){
+    	if(str.charAt(i-1)=="+" && str.charAt(i+1)=="+"){
+        	return true;
+        }
+      	else{
+        	return false;
+        }
+    }
+  }
+  
+         
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+SimpleSymbols(readline());           
+
