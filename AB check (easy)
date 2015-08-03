@@ -1,0 +1,17 @@
+function ABCheck(str) { 
+  var count = 0;
+  for(var i=0;i<str.length;i++){
+  	if(str.charAt(i).search(/[a]/gi)!=-1){
+  		if(str.charAt(i+4)=="b"){
+          count++;
+        }
+  	}
+  }
+  if(count>0){
+  	return true;
+  }
+  else{
+  	return false;
+  }
+}
+   
