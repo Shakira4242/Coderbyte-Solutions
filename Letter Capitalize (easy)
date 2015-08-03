@@ -1,0 +1,13 @@
+function LetterCapitalize(str) { 
+  var res = [];
+  var array = str.split(" ");
+  for(var i =0;i<array.length;i++){
+  	res.push(array[i][0].toUpperCase() + array[i].slice(1)); 
+  }
+  return res.join(" "); 
+         
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+LetterCapitalize(readline());  
