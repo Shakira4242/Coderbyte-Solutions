@@ -1,0 +1,19 @@
+function VowelCount(str) { 
+  var string = str.toString();
+  var vowels = "aeiou";
+  var count = 0;
+  for(var i=0; i<string.length; i++){
+  	var loc = vowels.indexOf(string.charAt(i));
+    if(loc != -1){
+    	count++;
+    }
+  }
+  // code goes here  
+  return count; 
+         
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+VowelCount(readline());           
+
