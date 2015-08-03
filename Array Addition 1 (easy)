@@ -1,0 +1,18 @@
+function ArrayAdditionI(arr) { 
+  var max = arr.sort(function(a,b){return a-b;}).pop();
+  function sort(target,array){
+  	if(array.length == 0){
+    	return target == 0;
+    }
+    else{
+    	var n = array[0];
+      	array = array.slice(1);
+      	return (sort(target,array) || sort(target-n,array));
+    }
+  }
+  return sort(max,arr);
+}
+   
+// keep this function call here 
+// to see how to enter arguments in JavaScript scroll down
+ArrayAdditionI(readline());           
